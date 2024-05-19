@@ -6,7 +6,7 @@
                         <!-- Breadcrumb Start -->
                         <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                             <h2 class="text-title-md2 font-bold text-black dark:text-white">
-                                Tables
+                                Genres
                             </h2>
 
                             <nav>
@@ -25,41 +25,40 @@
                             <!-- ====== Table Two Start -->
                             <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
                                 <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-                                    <div class="col-span-3 flex items-center">
-                                        <p class="font-medium">Anime Name</p>
+                                    <div class="col-span-1 flex items-center">
+                                        <p class="font-medium">id</p>
                                     </div>
-                                    <div class="col-span-1 items-center sm:flex">
-                                        <p class="font-medium">Genre</p>
+                                    <div class="col-span-2 flex items-center">
+                                        <p class="font-medium">Name</p>
                                     </div>
-                                    <div class="col-span-3 flex items-center">
-                                        <p class="font-medium">Synopsis</p>
+                                    <div class="col-span-4 flex items-center">
+                                        <p class="font-medium">Description</p>
                                     </div>
                                     <div class="col-span-1 flex items-center">
                                         <p class="font-medium">Actions</p>
-                                    </div>
+                                    </div>                        
                                 </div>
-                                
-                            @foreach ($movies as $movie)
 
+                                @foreach ($genres as $genre)
                                 <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-                                    <div class="col-span-3 flex items-center">
-                                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-                                            <div class="w-12 rounded-md">
-                                                <img src="src/images/movie/{{ $movie['poster'] }}" alt="Product" />
-                                            </div>
+                                    <div class="col-span-1 flex items-center">
+                                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center">                        
                                             <p class="text-sm font-medium text-black dark:text-white">
-                                                {{ $movie['title'] }}
+                                                {{ $genre['id']}}
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-span-1 items-center sm:flex">
+                                    <div class="col-span-2 items-center sm:flex">
+                                        <div class="w-12 rounded-md m-2">
+                                            <img src="src/images/movie/{{ $genre['poster'] }}" alt="Product" />
+                                        </div>
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                            {{ $movie['genre'] }}
+                                            {{ $genre['name']}}
                                         </p>
                                     </div>
-                                    <div class="col-span-3 flex items-center">
+                                    <div class="col-span-4 flex items-center m-2">
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                            {{ $movie['synopsis'] }}
+                                            {{ $genre['description']}}
                                         </p>
                                     </div>
                                     <div class="col-span-1 flex items-center">
@@ -69,7 +68,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                                @endforeach
                             </div>
 
                             <!-- ====== Table Two End -->
@@ -77,5 +76,4 @@
                         <!-- ====== Table Section End -->
                     </div>
                 </main>
-
 @endsection
