@@ -54,11 +54,8 @@
                                         </div>
                                     </div>
                                     <div class="col-span-2 items-center sm:flex">
-                                        <div class="w-12 rounded-md m-2">
-                                            <img src="src/images/movie/{{ $review->poster}}" alt="Product" />
-                                        </div>
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                            {{ $review->name}}
+                                            {{ $review->movie}}
                                         </p>
                                     </div>
                                     <div class="col-span-1 items-center sm:flex">
