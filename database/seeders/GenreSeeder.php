@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+
 use App\Models\Genre;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -14,20 +15,18 @@ class GenreSeeder extends Seeder
     {
         Genre::create([
             'id' => 1,
-            'title' => 'One Piece',
-            'description' => 'One Piece is a very popular pirate manga series, written and illustrated by Eiichiro Oda.'
+            'name' => 'Shounen',
+            'description' => 'is a genre of anime and manga targeted primarily at a young male audience, usually between the ages of 12 to 18. The genre is known for its action-packed, adventurous, camaraderie stories, and often features protagonists growing and evolving through great challenges.',
         ]);
-
         Genre::create([
             'id' => 2,
-            'title' => 'Demon Slayer',
-            'description' => 'Kimetsu no Yaiba(2019) is a historical fantasy anime following Tanjiro Kamado, a young boy who becomes a demon slayer after his family is attacked and his younger sister Nezuko is turned into a demon'
+            'name' => 'Drama',
+            'description' => 'is an anime genre that focuses on character development and emotions, often exploring complex and realistic life situations. This genre tends to be more serious and profound compared to other genres, trying to highlight feelings, internal conflicts, and relationships between characters.',
         ]);
-
         Genre::create([
             'id' => 3,
-            'title' => 'Gintama',
-            'description' => 'is a science fiction comedy anime set in an Edo period Japan that has been invaded by aliens. The story follows a samurai named Gintoki Sakata who runs a freelance business alongside his companions Shinpachi Shimura and Kagura.'
+            'name' => 'School',
+            'description' => 'focuses on the daily lives of the students in the school environment. This genre often combines elements from other genres such as drama, comedy, romance, and sometimes also fantasy or supernatural. Here are some of the characteristics of school genre anime',
         ]);
     }
 }
