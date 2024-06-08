@@ -84,7 +84,7 @@
                                             {{ $genre->name}}
                                         </p>
                                     </div>
-                                    <div class="col-span-4 flex items-center m-2">
+                                    <div class="col-span-4 flex items-center m-3">
                                         <p class="text-sm font-medium text-black dark:text-white">
                                             {{ $genre->description}}
                                         </p>
@@ -92,7 +92,7 @@
                                     <div class="col-span-1 flex items-center">
                                         <div class="col-span-1 flex items-center">
                                             <div class="flex items-center space-x-1">
-                                                <a href="" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Edit</a>
+                                                <a href="/genres/{{ $genre->id }}/edit" class="inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">Edit</a>
                                                 <form action="/genres/{{ $genre->id }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
